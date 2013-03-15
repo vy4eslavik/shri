@@ -1,0 +1,43 @@
+.calendar
+{
+    display: inline-block;
+    box-shadow: 0 0 10px #dfdfdf;
+    font-size: 0;                               /* Убирает отступы мужду inline-block */
+}
+.calendar div
+{
+    padding: 5px;
+    display: inline-block;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background-color: #fff;
+    color: #fff;
+    position: relative;
+    font: 13px Helvetica;
+}
+.calendar div > span
+{
+    color: #000;
+    position: absolute;
+    right: 5px;
+}
+
+.calendar div:nth-of-type(-n+7)
+{
+    border-top: none;
+}
+.calendar div:nth-of-type(7n+1)
+{
+    border-left: none;
+}
+div.selectStart,
+.selectStart ~ div
+{
+    background-color: #e1e1e1;
+    color: #e1e1e1;
+}
+.selectEnd ~ div
+{
+    background-color: #fff;
+    color: #fff;
+}
